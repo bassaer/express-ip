@@ -34,6 +34,10 @@ express-ip   express-ip.info   192.168.64.6   80      57s
 }
 ```
 ```
+❯ kubectl logs express-ip-5f9c66d8bd-gjbns --since=1s -f
+[2020-11-02T06:13:51.071] [INFO] access - 192.168.64.1 - - "GET / HTTP/1.1" 200 123 "" "curl/7.64.1"
+```
+```
 ❯ kubectl get pod -n kube-system -l app.kubernetes.io/name=nginx-ingress-controller -o jsonpath={.items..podIP}
 172.17.0.9
 ```
