@@ -1,0 +1,34 @@
+{
+    "name": "express-ip",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "ts-node src/server.ts",
+        "build": "tsc",
+        "start": "node dist/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bassaer/express-ip.git"
+    },
+    "keywords": [],
+    "author": "Tsubasa Nakayama <app.nakayama@gmail.com> (https://bassaer.github.io/me/)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bassaer/express-ip/issues"
+    },
+    "homepage": "https://github.com/bassaer/express-ip#readme",
+    "devDependencies": {
+        "@types/jest": "^26.0.15",
+        "@types/node": "^14.14.6",
+        "jest": "^26.6.1",
+        "ts-jest": "^26.4.3",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.5"
+    },
+    "dependencies": {
+        "@types/express": "^4.17.8",
+        "express": "^4.17.1"
+    }
+}
