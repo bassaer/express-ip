@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-ip
+spec:
+  selector:
+    matchLabels:
+      app: express-ip
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: express-ip
+    spec:
+      containers:
+      - name: express-ip
+        image: bassaer/express-ip
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80

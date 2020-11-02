@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: express-ip
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+  - host: express-ip.info
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: express-ip
+          servicePort: 80
