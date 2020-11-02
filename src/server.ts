@@ -17,6 +17,8 @@ const logger = log4js.configure({
 
 const app = express();
 
+app.enable('trust proxy');
+
 app.use(log4js.connectLogger(logger, { level: 'info' }));
 
 app.use('/', (req, res, next) => {
